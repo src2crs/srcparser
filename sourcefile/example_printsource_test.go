@@ -38,3 +38,33 @@ func Example_print_section() {
 	// 	"fmt"
 	// )
 }
+
+// Example_print_imports creates a SourceFile object from a file
+// and prints all import statements from that file.
+func Example_print_imports() {
+	// Create the SourceFile object using a file path.
+	sourcefile := New("testdata/greet.go")
+
+	// Print the Greet function.
+	fmt.Println(sourcefile.Imports().Source())
+
+	// Output:
+	// import (
+	//	"fmt"
+	// )
+}
+
+// Example_print_function creates a SourceFile object from a file
+// and prints a function from that file that's given by name.
+func Example_print_function() {
+	// Create the SourceFile object using a file path.
+	sourcefile := New("testdata/greet.go")
+
+	// Print the Greet function.
+	fmt.Println(sourcefile.Function("Greet").Source())
+
+	// Output:
+	// func Greet() {
+	//	fmt.Println("Hello SrcParser!")
+	// }
+}
