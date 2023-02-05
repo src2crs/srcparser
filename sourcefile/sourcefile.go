@@ -8,7 +8,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/src2crs/srcparser/sourcefile/nodes"
+	"github.com/src2crs/srcparser/nodes"
 )
 
 // SourceFile is a container that encapsulates a file path together with its source code
